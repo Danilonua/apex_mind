@@ -1,0 +1,14 @@
+{
+  "skill_name": "FileReader",
+  "filesystem": {
+    "read": [
+      "C:/Users/danil/Desktop/apex-test"
+    ],
+    "write": [],
+    "delete": []
+  },
+  "network": false,
+  "gpu": false,
+  "sensors": false,
+  "camera": false
+}

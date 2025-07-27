@@ -1,0 +1,30 @@
+[package]
+name = "wasi_security_layer"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasmtime = { version = "34.0.1", default-features = false, features = ["cranelift"] }
+wasmtime-wasi = { version = "34.0.1", default-features = false, features = ["preview1"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+futures = "0.3"
+
+# Зависимости, необходимые только для обычной (не-WASM) сборки
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+wgpu = "0.19"
+pollster = "0.3"
+pyo3 = { version = "0.24.1", default-features = false, features = ["extension-module", "abi3-py37", "macros"] }
+
+[build-dependencies]
+pyo3-build-config = "0.24.1"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true

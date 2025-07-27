@@ -1,0 +1,10 @@
+{
+    "skill_name": "WebSearch",
+    "filesystem": {
+        "read": ["/tmp", "/data/inputs", "."],
+        "write": ["/tmp/outputs"],
+        "delete": []
+    },
+    "network": true,
+    "gpu": false
+}

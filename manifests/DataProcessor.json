@@ -1,0 +1,18 @@
+{
+  "skill_name": "DataProcessor",
+  "filesystem": {
+    "read": [
+      "/app",
+      "/tmp"
+    ],
+    "write": [
+      "/app",
+      "/tmp"
+    ],
+    "delete": []
+  },
+  "network": true,
+  "gpu": true,
+  "sensors": true,
+  "camera": false
+}

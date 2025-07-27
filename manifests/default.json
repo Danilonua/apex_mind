@@ -1,0 +1,12 @@
+{
+  "skill_name": "default",
+  "filesystem": {
+    "read": [],
+    "write": [],
+    "delete": []
+  },
+  "network": true,
+  "gpu": false,
+  "sensors": false,
+  "camera": false
+}
